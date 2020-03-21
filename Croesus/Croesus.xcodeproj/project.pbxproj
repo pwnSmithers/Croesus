@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		78F0ADFCB49BF75FE6BA7649 /* Pods_CroesusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38B2DC8338EC802E0BEC0C1 /* Pods_CroesusTests.framework */; };
+		92C00804DB70477AFFF71343 /* Pods_Croesus_CroesusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220A99DEFBCD883445B4EB3D /* Pods_Croesus_CroesusUITests.framework */; };
 		963678DA242656F500A9B121 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963678D9242656F500A9B121 /* AppDelegate.swift */; };
 		963678DC242656F500A9B121 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963678DB242656F500A9B121 /* SceneDelegate.swift */; };
 		963678DE242656F500A9B121 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963678DD242656F500A9B121 /* FirstViewController.swift */; };
@@ -17,6 +19,8 @@
 		963678EB242656F800A9B121 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 963678E9242656F800A9B121 /* LaunchScreen.storyboard */; };
 		963678F6242656F800A9B121 /* CroesusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963678F5242656F800A9B121 /* CroesusTests.swift */; };
 		96367901242656F800A9B121 /* CroesusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96367900242656F800A9B121 /* CroesusUITests.swift */; };
+		9636790F2426667A00A9B121 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9636790E2426667A00A9B121 /* GoogleService-Info.plist */; };
+		A560CAC5E4B0EB72A735E95A /* Pods_Croesus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B150CBB389BDD966D6091814 /* Pods_Croesus.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		134A9901E4CC98B143ED82C9 /* Pods-Croesus-CroesusUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Croesus-CroesusUITests.release.xcconfig"; path = "Target Support Files/Pods-Croesus-CroesusUITests/Pods-Croesus-CroesusUITests.release.xcconfig"; sourceTree = "<group>"; };
+		220A99DEFBCD883445B4EB3D /* Pods_Croesus_CroesusUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Croesus_CroesusUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DF763EE38387020A122DBAA /* Pods-Croesus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Croesus.release.xcconfig"; path = "Target Support Files/Pods-Croesus/Pods-Croesus.release.xcconfig"; sourceTree = "<group>"; };
+		53B476D99D9F8390EEDE6503 /* Pods-CroesusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CroesusTests.release.xcconfig"; path = "Target Support Files/Pods-CroesusTests/Pods-CroesusTests.release.xcconfig"; sourceTree = "<group>"; };
+		57D5B1380F9DDB1F487A3DBD /* Pods-Croesus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Croesus.debug.xcconfig"; path = "Target Support Files/Pods-Croesus/Pods-Croesus.debug.xcconfig"; sourceTree = "<group>"; };
 		963678D6242656F500A9B121 /* Croesus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Croesus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		963678D9242656F500A9B121 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		963678DB242656F500A9B121 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +62,11 @@
 		963678FC242656F800A9B121 /* CroesusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CroesusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96367900242656F800A9B121 /* CroesusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CroesusUITests.swift; sourceTree = "<group>"; };
 		96367902242656F800A9B121 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9636790E2426667A00A9B121 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9642B4C478827F6C211562D1 /* Pods-CroesusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CroesusTests.debug.xcconfig"; path = "Target Support Files/Pods-CroesusTests/Pods-CroesusTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AEC6E8DABDE09B45F3A0DC1C /* Pods-Croesus-CroesusUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Croesus-CroesusUITests.debug.xcconfig"; path = "Target Support Files/Pods-Croesus-CroesusUITests/Pods-Croesus-CroesusUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B150CBB389BDD966D6091814 /* Pods_Croesus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Croesus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E38B2DC8338EC802E0BEC0C1 /* Pods_CroesusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CroesusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A560CAC5E4B0EB72A735E95A /* Pods_Croesus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78F0ADFCB49BF75FE6BA7649 /* Pods_CroesusTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92C00804DB70477AFFF71343 /* Pods_Croesus_CroesusUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +104,8 @@
 				963678F4242656F800A9B121 /* CroesusTests */,
 				963678FF242656F800A9B121 /* CroesusUITests */,
 				963678D7242656F500A9B121 /* Products */,
+				C7573BFAECF4CA2C6E7A1113 /* Pods */,
+				F26748A9EB22B2A4FC46B9C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,6 +130,7 @@
 				963678E7242656F800A9B121 /* Assets.xcassets */,
 				963678E9242656F800A9B121 /* LaunchScreen.storyboard */,
 				963678EC242656F800A9B121 /* Info.plist */,
+				9636790E2426667A00A9B121 /* GoogleService-Info.plist */,
 				963678E4242656F500A9B121 /* Croesus.xcdatamodeld */,
 			);
 			path = Croesus;
@@ -134,6 +154,30 @@
 			path = CroesusUITests;
 			sourceTree = "<group>";
 		};
+		C7573BFAECF4CA2C6E7A1113 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				57D5B1380F9DDB1F487A3DBD /* Pods-Croesus.debug.xcconfig */,
+				4DF763EE38387020A122DBAA /* Pods-Croesus.release.xcconfig */,
+				AEC6E8DABDE09B45F3A0DC1C /* Pods-Croesus-CroesusUITests.debug.xcconfig */,
+				134A9901E4CC98B143ED82C9 /* Pods-Croesus-CroesusUITests.release.xcconfig */,
+				9642B4C478827F6C211562D1 /* Pods-CroesusTests.debug.xcconfig */,
+				53B476D99D9F8390EEDE6503 /* Pods-CroesusTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F26748A9EB22B2A4FC46B9C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B150CBB389BDD966D6091814 /* Pods_Croesus.framework */,
+				220A99DEFBCD883445B4EB3D /* Pods_Croesus_CroesusUITests.framework */,
+				E38B2DC8338EC802E0BEC0C1 /* Pods_CroesusTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,9 +185,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96367905242656F800A9B121 /* Build configuration list for PBXNativeTarget "Croesus" */;
 			buildPhases = (
+				C1DC7077BFF348D0D19665B2 /* [CP] Check Pods Manifest.lock */,
 				963678D2242656F500A9B121 /* Sources */,
 				963678D3242656F500A9B121 /* Frameworks */,
 				963678D4242656F500A9B121 /* Resources */,
+				43AEB7B97A827F177DC39176 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -158,6 +204,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96367908242656F800A9B121 /* Build configuration list for PBXNativeTarget "CroesusTests" */;
 			buildPhases = (
+				5D060B3D09A8A513103B931E /* [CP] Check Pods Manifest.lock */,
 				963678ED242656F800A9B121 /* Sources */,
 				963678EE242656F800A9B121 /* Frameworks */,
 				963678EF242656F800A9B121 /* Resources */,
@@ -176,9 +223,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9636790B242656F800A9B121 /* Build configuration list for PBXNativeTarget "CroesusUITests" */;
 			buildPhases = (
+				51F0EA9F2E60C987CA121E5F /* [CP] Check Pods Manifest.lock */,
 				963678F8242656F800A9B121 /* Sources */,
 				963678F9242656F800A9B121 /* Frameworks */,
 				963678FA242656F800A9B121 /* Resources */,
+				5F6D71092A17DC1BDA37DF1E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -239,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				963678EB242656F800A9B121 /* LaunchScreen.storyboard in Resources */,
+				9636790F2426667A00A9B121 /* GoogleService-Info.plist in Resources */,
 				963678E8242656F800A9B121 /* Assets.xcassets in Resources */,
 				963678E3242656F500A9B121 /* Main.storyboard in Resources */,
 			);
@@ -259,6 +309,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		43AEB7B97A827F177DC39176 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Croesus/Pods-Croesus-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Croesus/Pods-Croesus-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Croesus/Pods-Croesus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		51F0EA9F2E60C987CA121E5F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Croesus-CroesusUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D060B3D09A8A513103B931E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CroesusTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F6D71092A17DC1BDA37DF1E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Croesus-CroesusUITests/Pods-Croesus-CroesusUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Croesus-CroesusUITests/Pods-Croesus-CroesusUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Croesus-CroesusUITests/Pods-Croesus-CroesusUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1DC7077BFF348D0D19665B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Croesus-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		963678D2242656F500A9B121 /* Sources */ = {
@@ -440,6 +593,7 @@
 		};
 		96367906242656F800A9B121 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57D5B1380F9DDB1F487A3DBD /* Pods-Croesus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -458,6 +612,7 @@
 		};
 		96367907242656F800A9B121 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DF763EE38387020A122DBAA /* Pods-Croesus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -476,6 +631,7 @@
 		};
 		96367909242656F800A9B121 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9642B4C478827F6C211562D1 /* Pods-CroesusTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -498,6 +654,7 @@
 		};
 		9636790A242656F800A9B121 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53B476D99D9F8390EEDE6503 /* Pods-CroesusTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -520,6 +677,7 @@
 		};
 		9636790C242656F800A9B121 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEC6E8DABDE09B45F3A0DC1C /* Pods-Croesus-CroesusUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -540,6 +698,7 @@
 		};
 		9636790D242656F800A9B121 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 134A9901E4CC98B143ED82C9 /* Pods-Croesus-CroesusUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
