@@ -34,7 +34,7 @@ class RegistrationViewController: UIViewController {
 
     // MARK: Actions
     @IBAction func uploadPhotoButton(_ sender: Any) {
-        
+        addPhoto()
     }
     
     @IBOutlet weak var registerButtonView: UIButton!
@@ -106,4 +106,50 @@ class RegistrationViewController: UIViewController {
         }
     }
     
+}
+
+extension RegistrationViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+    fileprivate func addPhoto(){
+        let imagePickerController = UIImagePickerController()
+               imagePickerController.delegate = self
+
+                let actionSheet = UIAlertController(title: "Photo Source", message: nil, preferredStyle: .actionSheet)
+               actionSheet.popoverPresentationController?.sourceView = self.view
+                actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action:UIAlertAction) in
+                   if UIImagePickerController.isSourceTypeAvailable(.camera){
+                       imagePickerController.sourceType = .camera
+                       self.present(imagePickerController, animated: true, completion: nil)
+                   }
+                }))
+                
+                actionSheet.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: { (action:UIAlertAction) in
+                    imagePickerController.sourceType = .photoLibrary
+                   self.present(imagePickerController, animated: true, completion: nil)
+                 }))
+                
+                actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+                self.present(actionSheet, animated: true, completion: nil)
+     
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        uploadPhoto(image: image)
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    fileprivate func uploadPhoto(image: UIImage){
+        self.showLoadingAdded(to: self.view)
+        
+        let data = image.jpegData(compressionQuality: 1.0)
+        
+        let imageName = UUID().uuidString
+        
+        let imageReference = Storage.storage().reference().child(<#T##path: String##String#>)
+    }
 }

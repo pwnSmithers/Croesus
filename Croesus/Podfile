@@ -10,6 +10,7 @@ target 'Croesus' do
   pod 'Firebase/Database', :inhibit_warnings => true
   pod 'Firebase/Auth', :inhibit_warnings => true
   pod 'SWActivityIndicatorView'
+  pod 'Firebase/Storage'
   target 'CroesusTests' do
     inherit! :search_paths
     # Pods for testing
