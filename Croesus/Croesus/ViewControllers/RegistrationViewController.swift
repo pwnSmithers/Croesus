@@ -16,27 +16,14 @@ class RegistrationViewController: UIViewController {
     fileprivate var blurView: UIView!
     
     // MARK: Outlets
-    @IBOutlet weak var firstName: UITextField!
-    
-    @IBOutlet weak var lastName: UITextField!
-    
-    @IBOutlet weak var idNumber: UITextField!
-    
+
     @IBOutlet weak var email: UITextField!
-    
-    @IBOutlet weak var phoneNumber: UITextField!
     
     @IBOutlet weak var password: UITextField!
     
     @IBOutlet weak var cofirmPassword: UITextField!
-    
-    @IBOutlet weak var photoImageView: UIImageView!
 
     // MARK: Actions
-    @IBAction func uploadPhotoButton(_ sender: Any) {
-        addPhoto()
-    }
-    
     @IBOutlet weak var registerButtonView: UIButton!
     
     
@@ -77,6 +64,7 @@ class RegistrationViewController: UIViewController {
                self.activityIndicatorView.removeFromSuperview()
            }
        }
+
     @objc fileprivate func registerUser(){
         self.showLoadingAdded(to: self.view)
         if email.text != "", password.text != "", cofirmPassword.text != ""{
@@ -91,8 +79,8 @@ class RegistrationViewController: UIViewController {
                     Auth.auth().signIn(withEmail: self.email.text!, password: self.password.text!) { (user, error) in
                         self.hideLoading()
                         //present first view controller
-                        if let tabViewController = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController {
-                            self.present(tabViewController, animated: true, completion: nil)
+                        if let personalInformation = self.storyboard?.instantiateViewController(withIdentifier: "personal") as? PersonalInformationViewController {
+                            self.present(personalInformation, animated: true, completion: nil)
                             
                         }
                     }
@@ -108,59 +96,3 @@ class RegistrationViewController: UIViewController {
     
 }
 
-extension RegistrationViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate{
-    
-    fileprivate func addPhoto(){
-        let imagePickerController = UIImagePickerController()
-               imagePickerController.delegate = self
-
-                let actionSheet = UIAlertController(title: "Photo Source", message: nil, preferredStyle: .actionSheet)
-               actionSheet.popoverPresentationController?.sourceView = self.view
-                actionSheet.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action:UIAlertAction) in
-                   if UIImagePickerController.isSourceTypeAvailable(.camera){
-                       imagePickerController.sourceType = .camera
-                       self.present(imagePickerController, animated: true, completion: nil)
-                   }
-                }))
-                
-                actionSheet.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: { (action:UIAlertAction) in
-                    imagePickerController.sourceType = .photoLibrary
-                   self.present(imagePickerController, animated: true, completion: nil)
-                 }))
-                
-                actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-                self.present(actionSheet, animated: true, completion: nil)
-     
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-        uploadPhoto(image: image)
-        picker.dismiss(animated: true, completion: nil)
-    }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true, completion: nil)
-    }
-    
-    fileprivate func uploadPhoto(image: UIImage){
-        self.showLoadingAdded(to: self.view)
-        let data = image.jpegData(compressionQuality: 1.0)
-        let imageName = UUID().uuidString
-        let imageReference = Storage.storage().reference().child("\(imageName).png")
-        if let imageData = data{
-            imageReference.putData(imageData, metadata: nil) { (metaData, error) in
-                self.hideLoading()
-                if error != nil{
-                    print(error)
-                }else{
-                    imageReference.downloadURL { (url, error) in
-                        print("this is the image url \(url)")
-                    }
-                }
-                
-            }
-        }
-
-    }
-}

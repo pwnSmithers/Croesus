@@ -23,6 +23,9 @@
 		9636790F2426667A00A9B121 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9636790E2426667A00A9B121 /* GoogleService-Info.plist */; };
 		963679122426762700A9B121 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963679112426762700A9B121 /* RegistrationViewController.swift */; };
 		96367914242676C400A9B121 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96367913242676C400A9B121 /* LoginViewController.swift */; };
+		964C98ED2427D61200D9619E /* PersonalInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964C98EC2427D61200D9619E /* PersonalInformationViewController.swift */; };
+		96FA6FD42427DDF100D009EA /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FA6FD32427DDF100D009EA /* UserData.swift */; };
+		96FA6FD62427E10400D009EA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FA6FD52427E10400D009EA /* User.swift */; };
 		A560CAC5E4B0EB72A735E95A /* Pods_Croesus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B150CBB389BDD966D6091814 /* Pods_Croesus.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +74,9 @@
 		963679112426762700A9B121 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		96367913242676C400A9B121 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9642B4C478827F6C211562D1 /* Pods-CroesusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CroesusTests.debug.xcconfig"; path = "Target Support Files/Pods-CroesusTests/Pods-CroesusTests.debug.xcconfig"; sourceTree = "<group>"; };
+		964C98EC2427D61200D9619E /* PersonalInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationViewController.swift; sourceTree = "<group>"; };
+		96FA6FD32427DDF100D009EA /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		96FA6FD52427E10400D009EA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AEC6E8DABDE09B45F3A0DC1C /* Pods-Croesus-CroesusUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Croesus-CroesusUITests.debug.xcconfig"; path = "Target Support Files/Pods-Croesus-CroesusUITests/Pods-Croesus-CroesusUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B150CBB389BDD966D6091814 /* Pods_Croesus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Croesus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E38B2DC8338EC802E0BEC0C1 /* Pods_CroesusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CroesusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +135,7 @@
 		963678D8242656F500A9B121 /* Croesus */ = {
 			isa = PBXGroup;
 			children = (
+				96FA6FD22427DDE300D009EA /* Models */,
 				964C98EB2427D55E00D9619E /* Storyboards */,
 				964C98EA2427D55200D9619E /* SupportFiles */,
 				964C98E92427D52D00D9619E /* ViewControllers */,
@@ -167,6 +174,7 @@
 				963679112426762700A9B121 /* RegistrationViewController.swift */,
 				96367913242676C400A9B121 /* LoginViewController.swift */,
 				961E1E3624269B1000A843D4 /* TabBarController.swift */,
+				964C98EC2427D61200D9619E /* PersonalInformationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -187,6 +195,15 @@
 				963678E9242656F800A9B121 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		96FA6FD22427DDE300D009EA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				96FA6FD32427DDF100D009EA /* UserData.swift */,
+				96FA6FD52427E10400D009EA /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		C7573BFAECF4CA2C6E7A1113 /* Pods */ = {
@@ -457,9 +474,12 @@
 				963679122426762700A9B121 /* RegistrationViewController.swift in Sources */,
 				963678E0242656F500A9B121 /* SecondViewController.swift in Sources */,
 				963678DE242656F500A9B121 /* FirstViewController.swift in Sources */,
+				964C98ED2427D61200D9619E /* PersonalInformationViewController.swift in Sources */,
 				963678E6242656F500A9B121 /* Croesus.xcdatamodeld in Sources */,
 				963678DA242656F500A9B121 /* AppDelegate.swift in Sources */,
+				96FA6FD42427DDF100D009EA /* UserData.swift in Sources */,
 				963678DC242656F500A9B121 /* SceneDelegate.swift in Sources */,
+				96FA6FD62427E10400D009EA /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
