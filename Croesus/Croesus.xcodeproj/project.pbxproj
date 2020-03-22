@@ -129,20 +129,14 @@
 		963678D8242656F500A9B121 /* Croesus */ = {
 			isa = PBXGroup;
 			children = (
+				964C98EB2427D55E00D9619E /* Storyboards */,
+				964C98EA2427D55200D9619E /* SupportFiles */,
+				964C98E92427D52D00D9619E /* ViewControllers */,
 				961E1E3824269D2B00A843D4 /* Croesus.entitlements */,
-				963678D9242656F500A9B121 /* AppDelegate.swift */,
-				963678DB242656F500A9B121 /* SceneDelegate.swift */,
-				963678DD242656F500A9B121 /* FirstViewController.swift */,
-				963678DF242656F500A9B121 /* SecondViewController.swift */,
-				963678E1242656F500A9B121 /* Main.storyboard */,
 				963678E7242656F800A9B121 /* Assets.xcassets */,
-				963678E9242656F800A9B121 /* LaunchScreen.storyboard */,
 				963678EC242656F800A9B121 /* Info.plist */,
 				9636790E2426667A00A9B121 /* GoogleService-Info.plist */,
 				963678E4242656F500A9B121 /* Croesus.xcdatamodeld */,
-				963679112426762700A9B121 /* RegistrationViewController.swift */,
-				96367913242676C400A9B121 /* LoginViewController.swift */,
-				961E1E3624269B1000A843D4 /* TabBarController.swift */,
 			);
 			path = Croesus;
 			sourceTree = "<group>";
@@ -163,6 +157,36 @@
 				96367902242656F800A9B121 /* Info.plist */,
 			);
 			path = CroesusUITests;
+			sourceTree = "<group>";
+		};
+		964C98E92427D52D00D9619E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				963678DD242656F500A9B121 /* FirstViewController.swift */,
+				963678DF242656F500A9B121 /* SecondViewController.swift */,
+				963679112426762700A9B121 /* RegistrationViewController.swift */,
+				96367913242676C400A9B121 /* LoginViewController.swift */,
+				961E1E3624269B1000A843D4 /* TabBarController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		964C98EA2427D55200D9619E /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				963678D9242656F500A9B121 /* AppDelegate.swift */,
+				963678DB242656F500A9B121 /* SceneDelegate.swift */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		964C98EB2427D55E00D9619E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				963678E1242656F500A9B121 /* Main.storyboard */,
+				963678E9242656F800A9B121 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		C7573BFAECF4CA2C6E7A1113 /* Pods */ = {

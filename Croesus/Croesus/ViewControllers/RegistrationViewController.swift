@@ -145,11 +145,22 @@ extension RegistrationViewController : UIImagePickerControllerDelegate, UINaviga
     
     fileprivate func uploadPhoto(image: UIImage){
         self.showLoadingAdded(to: self.view)
-        
         let data = image.jpegData(compressionQuality: 1.0)
-        
         let imageName = UUID().uuidString
-        
-        let imageReference = Storage.storage().reference().child(<#T##path: String##String#>)
+        let imageReference = Storage.storage().reference().child("\(imageName).png")
+        if let imageData = data{
+            imageReference.putData(imageData, metadata: nil) { (metaData, error) in
+                self.hideLoading()
+                if error != nil{
+                    print(error)
+                }else{
+                    imageReference.downloadURL { (url, error) in
+                        print("this is the image url \(url)")
+                    }
+                }
+                
+            }
+        }
+
     }
 }
