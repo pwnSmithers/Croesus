@@ -38,7 +38,28 @@ class FIRFirestoreService{
     }
     
     func read<T: Codable>(from collectionReference: FIRCollectionReference, returning objectType: T.Type, completion: @escaping ([T]) -> Void){
-        
-        
+        reference(to: .users).addSnapshotListener { (snapshot, _) in
+            guard let snapshot = snapshot else {return}
+            do{
+                var objects = [T]()
+                for document in snapshot.documents{
+                    let object = try document.decode(as: objectType.self)
+                    objects.append(object)
+                }
+                completion(objects)
+            }catch{
+                print(error)
+            }
+        }
+    }
+    
+    func update<T: Codable & Identifiable>(for encodableObject: T, in collectionReference: FIRCollectionReference){
+        do{
+            let json = try encodableObject.toJson(excluding: ["id"])
+            guard let id = encodableObject.id else { throw MyError.encodingError}
+            reference(to: .users).document(id).setData(json)
+        }catch{
+            print(error)
+        }
     }
 }

@@ -9,9 +9,12 @@
 import Foundation
 import Firebase
 
+protocol Identifiable {
+    var id : String? {get set}
+}
 
-struct UserData : Codable{
-    let id : String?
+struct UserData : Codable , Identifiable{
+    var id : String? = nil
     let firstName : String?
     let lastName : String?
     let userEmail : String?
