@@ -26,6 +26,10 @@
 		964C98ED2427D61200D9619E /* PersonalInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964C98EC2427D61200D9619E /* PersonalInformationViewController.swift */; };
 		96FA6FD42427DDF100D009EA /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FA6FD32427DDF100D009EA /* UserData.swift */; };
 		96FA6FD62427E10400D009EA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FA6FD52427E10400D009EA /* User.swift */; };
+		96FA6FD92427F7AD00D009EA /* FIRFirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FA6FD82427F7AD00D009EA /* FIRFirestoreService.swift */; };
+		96FA6FDB24280FBB00D009EA /* FIRCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FA6FDA24280FBB00D009EA /* FIRCollectionReference.swift */; };
+		96FA6FDE2428136E00D009EA /* EncodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FA6FDD2428136E00D009EA /* EncodableExtension.swift */; };
+		96FA6FE024281AA600D009EA /* SnapshotExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FA6FDF24281AA600D009EA /* SnapshotExtension.swift */; };
 		A560CAC5E4B0EB72A735E95A /* Pods_Croesus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B150CBB389BDD966D6091814 /* Pods_Croesus.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +81,10 @@
 		964C98EC2427D61200D9619E /* PersonalInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationViewController.swift; sourceTree = "<group>"; };
 		96FA6FD32427DDF100D009EA /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		96FA6FD52427E10400D009EA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		96FA6FD82427F7AD00D009EA /* FIRFirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIRFirestoreService.swift; sourceTree = "<group>"; };
+		96FA6FDA24280FBB00D009EA /* FIRCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIRCollectionReference.swift; sourceTree = "<group>"; };
+		96FA6FDD2428136E00D009EA /* EncodableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableExtension.swift; sourceTree = "<group>"; };
+		96FA6FDF24281AA600D009EA /* SnapshotExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotExtension.swift; sourceTree = "<group>"; };
 		AEC6E8DABDE09B45F3A0DC1C /* Pods-Croesus-CroesusUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Croesus-CroesusUITests.debug.xcconfig"; path = "Target Support Files/Pods-Croesus-CroesusUITests/Pods-Croesus-CroesusUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B150CBB389BDD966D6091814 /* Pods_Croesus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Croesus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E38B2DC8338EC802E0BEC0C1 /* Pods_CroesusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CroesusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +143,8 @@
 		963678D8242656F500A9B121 /* Croesus */ = {
 			isa = PBXGroup;
 			children = (
+				96FA6FDC2428135800D009EA /* Extensions */,
+				96FA6FD72427F72900D009EA /* Managers */,
 				96FA6FD22427DDE300D009EA /* Models */,
 				964C98EB2427D55E00D9619E /* Storyboards */,
 				964C98EA2427D55200D9619E /* SupportFiles */,
@@ -204,6 +214,24 @@
 				96FA6FD52427E10400D009EA /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		96FA6FD72427F72900D009EA /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				96FA6FD82427F7AD00D009EA /* FIRFirestoreService.swift */,
+				96FA6FDA24280FBB00D009EA /* FIRCollectionReference.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		96FA6FDC2428135800D009EA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				96FA6FDD2428136E00D009EA /* EncodableExtension.swift */,
+				96FA6FDF24281AA600D009EA /* SnapshotExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		C7573BFAECF4CA2C6E7A1113 /* Pods */ = {
@@ -470,12 +498,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				96367914242676C400A9B121 /* LoginViewController.swift in Sources */,
+				96FA6FD92427F7AD00D009EA /* FIRFirestoreService.swift in Sources */,
 				961E1E3724269B1000A843D4 /* TabBarController.swift in Sources */,
+				96FA6FDE2428136E00D009EA /* EncodableExtension.swift in Sources */,
 				963679122426762700A9B121 /* RegistrationViewController.swift in Sources */,
 				963678E0242656F500A9B121 /* SecondViewController.swift in Sources */,
 				963678DE242656F500A9B121 /* FirstViewController.swift in Sources */,
 				964C98ED2427D61200D9619E /* PersonalInformationViewController.swift in Sources */,
+				96FA6FE024281AA600D009EA /* SnapshotExtension.swift in Sources */,
 				963678E6242656F500A9B121 /* Croesus.xcdatamodeld in Sources */,
+				96FA6FDB24280FBB00D009EA /* FIRCollectionReference.swift in Sources */,
 				963678DA242656F500A9B121 /* AppDelegate.swift in Sources */,
 				96FA6FD42427DDF100D009EA /* UserData.swift in Sources */,
 				963678DC242656F500A9B121 /* SceneDelegate.swift in Sources */,

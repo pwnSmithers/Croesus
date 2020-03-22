@@ -17,8 +17,6 @@ class PersonalInformationViewController: UIViewController {
     fileprivate var activityIndicatorView: SWActivityIndicatorView!
     fileprivate var blurView: UIView!
     var user : User!
-    let usersRef = Database.database().reference(withPath: "online")
-    let ref = Database.database().reference(withPath: "userdata")
     var photoURL : String?
     
     // MARK: Outlets
@@ -53,9 +51,6 @@ class PersonalInformationViewController: UIViewController {
         Auth.auth().addStateDidChangeListener { auth, user in
            guard let user = user else { return }
            self.user = User(authData: user)
-           let currentUserRef = self.usersRef.child(self.user.uid)
-           currentUserRef.setValue(self.user.email)
-           currentUserRef.onDisconnectRemoveValue()
          }
     }
     func showLoadingAdded(to view: UIView) {
@@ -90,12 +85,7 @@ class PersonalInformationViewController: UIViewController {
             return
         }
         let userData = UserData(firstName: firstName, lastName: lastname, userEmail: self.user.email, photoUrl: photoUrlString)
-        print("userData\(userData)")
-        
-        let userRef = self.ref.child(self.user.email.lowercased())
-        print(userRef)
-        userRef.setValue(userData.toAnyObject())
-        
+        FIRFirestoreService.shared.create(for: userData, in: .users)
     }
     
 }
@@ -150,6 +140,7 @@ extension PersonalInformationViewController : UIImagePickerControllerDelegate, U
                     imageReference.downloadURL { (url, error) in
                         if let stringURl = url?.absoluteString{
                             self.photoURL = stringURl
+                            self.profilePicture.image = image
                             print("this is the image url \(stringURl)")
                         }
                         
