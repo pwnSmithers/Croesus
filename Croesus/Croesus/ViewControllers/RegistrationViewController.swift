@@ -54,6 +54,7 @@ class RegistrationViewController: UIViewController {
                     self.present(actionSheet, animated: true, completion: nil)
                 }else{
                     self.showLoadingAdded(to: self.view)
+                    
                     Auth.auth().signIn(withEmail: self.email.text!, password: self.password.text!) { (user, error) in
                         self.hideLoading()
                         //present first view controller

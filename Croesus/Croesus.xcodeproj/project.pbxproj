@@ -26,6 +26,8 @@
 		964C98ED2427D61200D9619E /* PersonalInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964C98EC2427D61200D9619E /* PersonalInformationViewController.swift */; };
 		968F08DD24290E0200447A57 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F08DC24290E0200447A57 /* ActivityIndicator.swift */; };
 		968F08DF24291E0800447A57 /* PresentTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F08DE24291E0800447A57 /* PresentTabController.swift */; };
+		968F08E1242920D700447A57 /* RotateImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F08E0242920D700447A57 /* RotateImageViewController.swift */; };
+		968F08E324296C6600447A57 /* RotateImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F08E224296C6600447A57 /* RotateImageExtension.swift */; };
 		96FA6FD42427DDF100D009EA /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FA6FD32427DDF100D009EA /* UserData.swift */; };
 		96FA6FD62427E10400D009EA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FA6FD52427E10400D009EA /* User.swift */; };
 		96FA6FD92427F7AD00D009EA /* FIRFirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FA6FD82427F7AD00D009EA /* FIRFirestoreService.swift */; };
@@ -83,6 +85,8 @@
 		964C98EC2427D61200D9619E /* PersonalInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationViewController.swift; sourceTree = "<group>"; };
 		968F08DC24290E0200447A57 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		968F08DE24291E0800447A57 /* PresentTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentTabController.swift; sourceTree = "<group>"; };
+		968F08E0242920D700447A57 /* RotateImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotateImageViewController.swift; sourceTree = "<group>"; };
+		968F08E224296C6600447A57 /* RotateImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotateImageExtension.swift; sourceTree = "<group>"; };
 		96FA6FD32427DDF100D009EA /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		96FA6FD52427E10400D009EA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		96FA6FD82427F7AD00D009EA /* FIRFirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIRFirestoreService.swift; sourceTree = "<group>"; };
@@ -190,6 +194,7 @@
 				96367913242676C400A9B121 /* LoginViewController.swift */,
 				961E1E3624269B1000A843D4 /* TabBarController.swift */,
 				964C98EC2427D61200D9619E /* PersonalInformationViewController.swift */,
+				968F08E0242920D700447A57 /* RotateImageViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 			children = (
 				96FA6FDD2428136E00D009EA /* EncodableExtension.swift */,
 				96FA6FDF24281AA600D009EA /* SnapshotExtension.swift */,
+				968F08E224296C6600447A57 /* RotateImageExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -524,6 +530,8 @@
 				96FA6FDB24280FBB00D009EA /* FIRCollectionReference.swift in Sources */,
 				963678DA242656F500A9B121 /* AppDelegate.swift in Sources */,
 				968F08DD24290E0200447A57 /* ActivityIndicator.swift in Sources */,
+				968F08E324296C6600447A57 /* RotateImageExtension.swift in Sources */,
+				968F08E1242920D700447A57 /* RotateImageViewController.swift in Sources */,
 				96FA6FD42427DDF100D009EA /* UserData.swift in Sources */,
 				963678DC242656F500A9B121 /* SceneDelegate.swift in Sources */,
 				968F08DF24291E0800447A57 /* PresentTabController.swift in Sources */,

@@ -28,17 +28,37 @@ class FIRFirestoreService{
         
     }
     
-    func create<T: Codable>(for encondableObject: T, in collectionReference: FIRCollectionReference, completion: @escaping (Bool) -> Void){
+    func getUserProfile(uid:String){
+        reference(to: .users).document(uid).getDocument { (document, error) in
+            if let document = document, document.exists{
+                print(document.data())
+            }
+        }
+    }
+    
+    func create<T: Codable>(for encondableObject: T, uid: String, in collectionReference: FIRCollectionReference, completion: @escaping (Bool) -> Void){
         do{
             let json = try encondableObject.toJson(excluding: ["id"])
-            reference(to: .users).addDocument(data: json)
-            
+            reference(to: .users).document(uid).setData(json)
             completion(true)
             print("Completed Task")
         }catch{
             print(error)
         }
     }
+    
+    
+//    func create<T: Codable>(for encondableObject: T, in collectionReference: FIRCollectionReference, completion: @escaping (Bool) -> Void){
+//        do{
+//            let json = try encondableObject.toJson(excluding: ["id"])
+//            reference(to: .users).addDocument(data: json)
+//            reference(to: .users).document("uid").setData(json)
+//            completion(true)
+//            print("Completed Task")
+//        }catch{
+//            print(error)
+//        }
+//    }
     
     func read<T: Codable>(from collectionReference: FIRCollectionReference, returning objectType: T.Type, completion: @escaping ([T]) -> Void){
         reference(to: .users).addSnapshotListener { (snapshot, _) in
