@@ -28,10 +28,13 @@ class FIRFirestoreService{
         
     }
     
-    func create<T: Codable>(for encondableObject: T, in collectionReference: FIRCollectionReference){
+    func create<T: Codable>(for encondableObject: T, in collectionReference: FIRCollectionReference, completion: @escaping (Bool) -> Void){
         do{
             let json = try encondableObject.toJson(excluding: ["id"])
             reference(to: .users).addDocument(data: json)
+            
+            completion(true)
+            print("Completed Task")
         }catch{
             print(error)
         }

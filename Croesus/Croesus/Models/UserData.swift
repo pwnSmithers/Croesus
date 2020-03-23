@@ -20,8 +20,6 @@ struct UserData : Codable , Identifiable{
     let userEmail : String?
     let photoUrl : String?
 
-    
-    
     init(id: String = "", firstName:String, lastName:String, userEmail:String, photoUrl:String) {
         self.id = id
         self.firstName = firstName

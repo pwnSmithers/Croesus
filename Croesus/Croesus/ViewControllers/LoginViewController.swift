@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 class LoginViewController: UIViewController {
     
@@ -19,7 +20,7 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func loginButton(_ sender: Any) {
-        
+        login()
         
     }
     
@@ -31,6 +32,32 @@ class LoginViewController: UIViewController {
     fileprivate func setupView(){
         loginButtonView.layer.cornerRadius = 8
         
+    }
+    
+    fileprivate func login(){
+        guard
+          let email = userName.text,
+          let password = password.text,
+          email.count > 0,
+          password.count > 0
+          else {
+            return
+        }
+        self.showLoadingAdded(to: self.view)
+        Auth.auth().signIn(withEmail: email, password: password) { user, error in
+            self.hideLoading()
+            if let error = error, user == nil {
+            let alert = UIAlertController(title: "Sign In Failed",
+                                          message: error.localizedDescription,
+                                          preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            
+            self.present(alert, animated: true, completion: nil)
+          }
+
+            self.segueToTabController()
+        }
     }
     
 }
