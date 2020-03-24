@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		78F0ADFCB49BF75FE6BA7649 /* Pods_CroesusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38B2DC8338EC802E0BEC0C1 /* Pods_CroesusTests.framework */; };
 		92C00804DB70477AFFF71343 /* Pods_Croesus_CroesusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220A99DEFBCD883445B4EB3D /* Pods_Croesus_CroesusUITests.framework */; };
+		961E1E3724269B1000A843D4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961E1E3624269B1000A843D4 /* TabBarController.swift */; };
 		963678DA242656F500A9B121 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963678D9242656F500A9B121 /* AppDelegate.swift */; };
 		963678DC242656F500A9B121 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963678DB242656F500A9B121 /* SceneDelegate.swift */; };
 		963678DE242656F500A9B121 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963678DD242656F500A9B121 /* FirstViewController.swift */; };
@@ -20,6 +21,19 @@
 		963678F6242656F800A9B121 /* CroesusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963678F5242656F800A9B121 /* CroesusTests.swift */; };
 		96367901242656F800A9B121 /* CroesusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96367900242656F800A9B121 /* CroesusUITests.swift */; };
 		9636790F2426667A00A9B121 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9636790E2426667A00A9B121 /* GoogleService-Info.plist */; };
+		963679122426762700A9B121 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963679112426762700A9B121 /* RegistrationViewController.swift */; };
+		96367914242676C400A9B121 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96367913242676C400A9B121 /* LoginViewController.swift */; };
+		964C98ED2427D61200D9619E /* PersonalInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964C98EC2427D61200D9619E /* PersonalInformationViewController.swift */; };
+		968F08DD24290E0200447A57 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F08DC24290E0200447A57 /* ActivityIndicator.swift */; };
+		968F08DF24291E0800447A57 /* PresentTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F08DE24291E0800447A57 /* PresentTabController.swift */; };
+		968F08E1242920D700447A57 /* RotateImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F08E0242920D700447A57 /* RotateImageViewController.swift */; };
+		968F08E324296C6600447A57 /* RotateImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968F08E224296C6600447A57 /* RotateImageExtension.swift */; };
+		96FA6FD42427DDF100D009EA /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FA6FD32427DDF100D009EA /* UserData.swift */; };
+		96FA6FD62427E10400D009EA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FA6FD52427E10400D009EA /* User.swift */; };
+		96FA6FD92427F7AD00D009EA /* FIRFirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FA6FD82427F7AD00D009EA /* FIRFirestoreService.swift */; };
+		96FA6FDB24280FBB00D009EA /* FIRCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FA6FDA24280FBB00D009EA /* FIRCollectionReference.swift */; };
+		96FA6FDE2428136E00D009EA /* EncodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FA6FDD2428136E00D009EA /* EncodableExtension.swift */; };
+		96FA6FE024281AA600D009EA /* SnapshotExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FA6FDF24281AA600D009EA /* SnapshotExtension.swift */; };
 		A560CAC5E4B0EB72A735E95A /* Pods_Croesus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B150CBB389BDD966D6091814 /* Pods_Croesus.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +60,8 @@
 		4DF763EE38387020A122DBAA /* Pods-Croesus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Croesus.release.xcconfig"; path = "Target Support Files/Pods-Croesus/Pods-Croesus.release.xcconfig"; sourceTree = "<group>"; };
 		53B476D99D9F8390EEDE6503 /* Pods-CroesusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CroesusTests.release.xcconfig"; path = "Target Support Files/Pods-CroesusTests/Pods-CroesusTests.release.xcconfig"; sourceTree = "<group>"; };
 		57D5B1380F9DDB1F487A3DBD /* Pods-Croesus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Croesus.debug.xcconfig"; path = "Target Support Files/Pods-Croesus/Pods-Croesus.debug.xcconfig"; sourceTree = "<group>"; };
+		961E1E3624269B1000A843D4 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		961E1E3824269D2B00A843D4 /* Croesus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Croesus.entitlements; sourceTree = "<group>"; };
 		963678D6242656F500A9B121 /* Croesus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Croesus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		963678D9242656F500A9B121 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		963678DB242656F500A9B121 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,7 +79,20 @@
 		96367900242656F800A9B121 /* CroesusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CroesusUITests.swift; sourceTree = "<group>"; };
 		96367902242656F800A9B121 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9636790E2426667A00A9B121 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		963679112426762700A9B121 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		96367913242676C400A9B121 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9642B4C478827F6C211562D1 /* Pods-CroesusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CroesusTests.debug.xcconfig"; path = "Target Support Files/Pods-CroesusTests/Pods-CroesusTests.debug.xcconfig"; sourceTree = "<group>"; };
+		964C98EC2427D61200D9619E /* PersonalInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInformationViewController.swift; sourceTree = "<group>"; };
+		968F08DC24290E0200447A57 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		968F08DE24291E0800447A57 /* PresentTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentTabController.swift; sourceTree = "<group>"; };
+		968F08E0242920D700447A57 /* RotateImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotateImageViewController.swift; sourceTree = "<group>"; };
+		968F08E224296C6600447A57 /* RotateImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotateImageExtension.swift; sourceTree = "<group>"; };
+		96FA6FD32427DDF100D009EA /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		96FA6FD52427E10400D009EA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		96FA6FD82427F7AD00D009EA /* FIRFirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIRFirestoreService.swift; sourceTree = "<group>"; };
+		96FA6FDA24280FBB00D009EA /* FIRCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIRCollectionReference.swift; sourceTree = "<group>"; };
+		96FA6FDD2428136E00D009EA /* EncodableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableExtension.swift; sourceTree = "<group>"; };
+		96FA6FDF24281AA600D009EA /* SnapshotExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotExtension.swift; sourceTree = "<group>"; };
 		AEC6E8DABDE09B45F3A0DC1C /* Pods-Croesus-CroesusUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Croesus-CroesusUITests.debug.xcconfig"; path = "Target Support Files/Pods-Croesus-CroesusUITests/Pods-Croesus-CroesusUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B150CBB389BDD966D6091814 /* Pods_Croesus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Croesus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E38B2DC8338EC802E0BEC0C1 /* Pods_CroesusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CroesusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,13 +151,15 @@
 		963678D8242656F500A9B121 /* Croesus */ = {
 			isa = PBXGroup;
 			children = (
-				963678D9242656F500A9B121 /* AppDelegate.swift */,
-				963678DB242656F500A9B121 /* SceneDelegate.swift */,
-				963678DD242656F500A9B121 /* FirstViewController.swift */,
-				963678DF242656F500A9B121 /* SecondViewController.swift */,
-				963678E1242656F500A9B121 /* Main.storyboard */,
+				968F08DB24290DE500447A57 /* Helpers */,
+				96FA6FDC2428135800D009EA /* Extensions */,
+				96FA6FD72427F72900D009EA /* Managers */,
+				96FA6FD22427DDE300D009EA /* Models */,
+				964C98EB2427D55E00D9619E /* Storyboards */,
+				964C98EA2427D55200D9619E /* SupportFiles */,
+				964C98E92427D52D00D9619E /* ViewControllers */,
+				961E1E3824269D2B00A843D4 /* Croesus.entitlements */,
 				963678E7242656F800A9B121 /* Assets.xcassets */,
-				963678E9242656F800A9B121 /* LaunchScreen.storyboard */,
 				963678EC242656F800A9B121 /* Info.plist */,
 				9636790E2426667A00A9B121 /* GoogleService-Info.plist */,
 				963678E4242656F500A9B121 /* Croesus.xcdatamodeld */,
@@ -154,6 +185,75 @@
 			path = CroesusUITests;
 			sourceTree = "<group>";
 		};
+		964C98E92427D52D00D9619E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				963678DD242656F500A9B121 /* FirstViewController.swift */,
+				963678DF242656F500A9B121 /* SecondViewController.swift */,
+				96367913242676C400A9B121 /* LoginViewController.swift */,
+				961E1E3624269B1000A843D4 /* TabBarController.swift */,
+				963679112426762700A9B121 /* RegistrationViewController.swift */,
+				964C98EC2427D61200D9619E /* PersonalInformationViewController.swift */,
+				968F08E0242920D700447A57 /* RotateImageViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		964C98EA2427D55200D9619E /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				963678D9242656F500A9B121 /* AppDelegate.swift */,
+				963678DB242656F500A9B121 /* SceneDelegate.swift */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		964C98EB2427D55E00D9619E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				963678E1242656F500A9B121 /* Main.storyboard */,
+				963678E9242656F800A9B121 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		968F08DB24290DE500447A57 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				968F08DC24290E0200447A57 /* ActivityIndicator.swift */,
+				968F08DE24291E0800447A57 /* PresentTabController.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		96FA6FD22427DDE300D009EA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				96FA6FD32427DDF100D009EA /* UserData.swift */,
+				96FA6FD52427E10400D009EA /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		96FA6FD72427F72900D009EA /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				96FA6FD82427F7AD00D009EA /* FIRFirestoreService.swift */,
+				96FA6FDA24280FBB00D009EA /* FIRCollectionReference.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		96FA6FDC2428135800D009EA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				96FA6FDD2428136E00D009EA /* EncodableExtension.swift */,
+				96FA6FDF24281AA600D009EA /* SnapshotExtension.swift */,
+				968F08E224296C6600447A57 /* RotateImageExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C7573BFAECF4CA2C6E7A1113 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,7 +264,6 @@
 				9642B4C478827F6C211562D1 /* Pods-CroesusTests.debug.xcconfig */,
 				53B476D99D9F8390EEDE6503 /* Pods-CroesusTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -418,11 +517,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96367914242676C400A9B121 /* LoginViewController.swift in Sources */,
+				96FA6FD92427F7AD00D009EA /* FIRFirestoreService.swift in Sources */,
+				961E1E3724269B1000A843D4 /* TabBarController.swift in Sources */,
+				96FA6FDE2428136E00D009EA /* EncodableExtension.swift in Sources */,
+				963679122426762700A9B121 /* RegistrationViewController.swift in Sources */,
 				963678E0242656F500A9B121 /* SecondViewController.swift in Sources */,
 				963678DE242656F500A9B121 /* FirstViewController.swift in Sources */,
+				964C98ED2427D61200D9619E /* PersonalInformationViewController.swift in Sources */,
+				96FA6FE024281AA600D009EA /* SnapshotExtension.swift in Sources */,
 				963678E6242656F500A9B121 /* Croesus.xcdatamodeld in Sources */,
+				96FA6FDB24280FBB00D009EA /* FIRCollectionReference.swift in Sources */,
 				963678DA242656F500A9B121 /* AppDelegate.swift in Sources */,
+				968F08DD24290E0200447A57 /* ActivityIndicator.swift in Sources */,
+				968F08E324296C6600447A57 /* RotateImageExtension.swift in Sources */,
+				968F08E1242920D700447A57 /* RotateImageViewController.swift in Sources */,
+				96FA6FD42427DDF100D009EA /* UserData.swift in Sources */,
 				963678DC242656F500A9B121 /* SceneDelegate.swift in Sources */,
+				968F08DF24291E0800447A57 /* PresentTabController.swift in Sources */,
+				96FA6FD62427E10400D009EA /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +709,7 @@
 			baseConfigurationReference = 57D5B1380F9DDB1F487A3DBD /* Pods-Croesus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Croesus/Croesus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5P662H3S28;
 				INFOPLIST_FILE = Croesus/Info.plist;
@@ -603,7 +717,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.bulamu.Croesus;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bulamu.croesus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -615,6 +729,7 @@
 			baseConfigurationReference = 4DF763EE38387020A122DBAA /* Pods-Croesus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Croesus/Croesus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5P662H3S28;
 				INFOPLIST_FILE = Croesus/Info.plist;
@@ -622,7 +737,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.bulamu.Croesus;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bulamu.croesus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
