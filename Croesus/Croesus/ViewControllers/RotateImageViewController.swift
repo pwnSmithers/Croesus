@@ -18,10 +18,10 @@ class RotateImageViewController: UIViewController {
     @IBOutlet weak var rotateButtonView: UIButton!
     
     @IBAction func rotateButton(_ sender: Any) {
-        if let image = imageToEdit.image{
-            let newImage = image.rotate(radians: .pi/2)
-            imageToEdit.image = newImage
+        guard let image = imageToEdit.image else {
+            return
         }
+        rotateImage(image: image)
     }
     @IBAction func doneButton(_ sender: Any) {
         dismissScreen(image: imageToEdit.image!)
@@ -42,11 +42,11 @@ class RotateImageViewController: UIViewController {
     }
     
     fileprivate func rotateImage(image: UIImage){
-        
+         let newImage = image.rotate(radians: .pi/2)
+         imageToEdit.image = newImage
     }
     fileprivate func dismissScreen(image: UIImage){
         uploadPhoto(image: image)
-        self.dismiss(animated: true, completion: nil)
     }
     
  fileprivate func uploadPhoto(image: UIImage){
@@ -62,9 +62,13 @@ class RotateImageViewController: UIViewController {
               }else{
                   imageReference.downloadURL { (url, error) in
                       if let stringURl = url?.absoluteString{
-                          let personalInforVC = PersonalInformationViewController()
-                          personalInforVC.photoURL = stringURl
-                          personalInforVC.profilePicture.image = image
+                        let imageDataDic : [String:UIImage] = ["image":image]
+                        let urlDataDic : [String:String] = ["photourl":stringURl]
+                        let profilePicKey = Notification.Name(rawValue: profileImageNotificationKey)
+                        let profilePicUrlKey = Notification.Name(rawValue: profilePicURLNotificationKey)
+                        NotificationCenter.default.post(name: profilePicKey, object: nil, userInfo: imageDataDic)
+                        NotificationCenter.default.post(name: profilePicUrlKey, object: nil, userInfo: urlDataDic)
+                        self.dismiss(animated: true, completion: nil)
                       }
                       
                   }

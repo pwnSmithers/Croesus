@@ -190,9 +190,9 @@
 			children = (
 				963678DD242656F500A9B121 /* FirstViewController.swift */,
 				963678DF242656F500A9B121 /* SecondViewController.swift */,
-				963679112426762700A9B121 /* RegistrationViewController.swift */,
 				96367913242676C400A9B121 /* LoginViewController.swift */,
 				961E1E3624269B1000A843D4 /* TabBarController.swift */,
+				963679112426762700A9B121 /* RegistrationViewController.swift */,
 				964C98EC2427D61200D9619E /* PersonalInformationViewController.swift */,
 				968F08E0242920D700447A57 /* RotateImageViewController.swift */,
 			);

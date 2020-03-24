@@ -57,7 +57,7 @@ class RegistrationViewController: UIViewController {
                     
                     Auth.auth().signIn(withEmail: self.email.text!, password: self.password.text!) { (user, error) in
                         self.hideLoading()
-                        //present first view controller
+                        //present personal information view controller
                         if let personalInformation = self.storyboard?.instantiateViewController(withIdentifier: "personal") as? PersonalInformationViewController {
                             self.present(personalInformation, animated: true, completion: nil)
                             

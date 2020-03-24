@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 
+var uid : String?
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

@@ -11,6 +11,9 @@ import UIKit
 import Firebase
 import SWActivityIndicatorView
 
+let profileImageNotificationKey = "co.smithers.profilepicture"
+let profilePicURLNotificationKey = "co.smithers.profpicurl"
+
 class PersonalInformationViewController: UIViewController {
     
     // MARK: Properties
@@ -18,7 +21,9 @@ class PersonalInformationViewController: UIViewController {
     fileprivate var blurView: UIView!
     var user : User!
     var photoURL : String?
-    var uid : String?
+    //var uid : String?
+    let profilePicKey = Notification.Name(rawValue: profileImageNotificationKey)
+    let profilePicUrlKey = Notification.Name(rawValue: profilePicURLNotificationKey)
     
     // MARK: Outlets
     @IBOutlet weak var firstName: UITextField!
@@ -39,10 +44,15 @@ class PersonalInformationViewController: UIViewController {
         sendUserData()
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         setupUserListeners()
+        createObservers()
     }
     
     fileprivate func setupView(){
@@ -52,16 +62,19 @@ class PersonalInformationViewController: UIViewController {
         Auth.auth().addStateDidChangeListener { auth, user in
            guard let user = user else { return }
            self.user = User(authData: user)
+            uid = self.user.uid
          }
     }
     
     fileprivate func sendUserData(){
         self.showLoadingAdded(to: self.view)
+
         guard let firstName = firstName.text,
             let lastname = lastName.text,
             let photoUrlString = photoURL,
             let UID = uid
         else {
+            self.hideLoading()
             return
         }
         let userData = UserData(firstName: firstName, lastName: lastname, userEmail: self.user.email, photoUrl: photoUrlString)
@@ -70,6 +83,27 @@ class PersonalInformationViewController: UIViewController {
                 self.hideLoading()
                 self.segueToTabController()
                 print("Awesome")
+            }
+        }
+    }
+    
+    fileprivate func createObservers(){
+        NotificationCenter.default.addObserver(self, selector: #selector(setProfilePic(notification:)), name: profilePicKey, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(setProfilePicUrl(notification:)), name: profilePicUrlKey, object: nil)
+    }
+    
+    @objc fileprivate func setProfilePic(notification: NSNotification){
+        if let dic = notification.userInfo as NSDictionary? {
+            if let pic = dic["image"] as? UIImage{
+                profilePicture.image = pic
+            }
+        }
+    }
+    
+    @objc fileprivate func setProfilePicUrl(notification: NSNotification){
+        if let dic = notification.userInfo as NSDictionary? {
+            if let url = dic["photourl"] as? String{
+                photoURL = url
             }
         }
     }
@@ -106,11 +140,11 @@ extension PersonalInformationViewController : UIImagePickerControllerDelegate, U
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-        let imageRotationVC = RotateImageViewController()
-        imageRotationVC.imageToRotate = image
         picker.dismiss(animated: true, completion: nil)
-        present(imageRotationVC, animated: true, completion: nil)
-        //self.navigationController?.pushViewController(imageRotationVC, animated: true)
+        if let imageRotateVC = self.storyboard?.instantiateViewController(withIdentifier: "rotate") as? RotateImageViewController {
+            imageRotateVC.imageToRotate = image
+            self.present(imageRotateVC, animated: true, completion: nil)
+       }
     }
 
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

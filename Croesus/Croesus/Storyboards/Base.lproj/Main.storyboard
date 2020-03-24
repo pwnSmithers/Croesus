@@ -303,10 +303,11 @@
                                     <action selector="uploadPhoto:" destination="A7T-xe-wKq" eventType="touchUpInside" id="rDE-2F-zSC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEP-Kx-dpl">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qEP-Kx-dpl">
                                 <rect key="frame" x="123" y="742" width="168" height="30"/>
                                 <color key="backgroundColor" red="0.99401146169999999" green="0.25308194760000002" blue="0.1999073029" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="168" id="DC6-A2-ahA"/>
                                     <constraint firstAttribute="height" constant="30" id="k2p-vZ-sjQ"/>
                                 </constraints>
                                 <state key="normal" title="Submit information">
@@ -363,27 +364,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jp8-Dd-Itr">
-                                <rect key="frame" x="20" y="175" width="374" height="546"/>
+                                <rect key="frame" x="20" y="157.5" width="374" height="581"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c29-1r-sZT">
                                 <rect key="frame" x="20" y="768" width="167" height="30"/>
+                                <color key="backgroundColor" red="0.99401146169999999" green="0.25308194760000002" blue="0.1999073029" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="167" id="uS4-90-jZ9"/>
+                                    <constraint firstAttribute="width" constant="167" id="1Lz-hU-SlE"/>
                                 </constraints>
-                                <state key="normal" title="Rotate"/>
+                                <state key="normal" title="Rotate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="rotateButton:" destination="ZBK-s4-zNe" eventType="touchUpInside" id="oBo-Xu-uzw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flX-tW-LPv">
                                 <rect key="frame" x="227" y="768" width="167" height="30"/>
-                                <state key="normal" title="Done"/>
+                                <color key="backgroundColor" red="0.99401146169999999" green="0.25308194760000002" blue="0.1999073029" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="doneButton:" destination="ZBK-s4-zNe" eventType="touchUpInside" id="YpK-7U-hlG"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rotate image until it's upright" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3n-l0-YbH">
-                                <rect key="frame" x="20" y="103" width="374" height="38"/>
+                                <rect key="frame" x="20" y="103" width="374" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20.5" id="ou9-ny-VaA"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -391,18 +401,17 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="L3n-l0-YbH" firstAttribute="leading" secondItem="cW3-Q2-3rr" secondAttribute="leadingMargin" id="857-QN-Ucr"/>
-                            <constraint firstItem="c29-1r-sZT" firstAttribute="top" secondItem="jp8-Dd-Itr" secondAttribute="bottom" constant="47" id="CHN-hu-eXG"/>
-                            <constraint firstItem="c29-1r-sZT" firstAttribute="baseline" secondItem="flX-tW-LPv" secondAttribute="baseline" id="ELD-T3-jqa"/>
-                            <constraint firstItem="L3n-l0-YbH" firstAttribute="trailing" secondItem="cW3-Q2-3rr" secondAttribute="trailingMargin" id="Rg5-Lg-pOF"/>
-                            <constraint firstItem="jp8-Dd-Itr" firstAttribute="leading" secondItem="c29-1r-sZT" secondAttribute="leading" id="Tcu-fw-Icl"/>
-                            <constraint firstItem="L3n-l0-YbH" firstAttribute="top" secondItem="uYH-ae-8lw" secondAttribute="top" constant="59" id="XrN-3l-C1K"/>
-                            <constraint firstItem="jp8-Dd-Itr" firstAttribute="trailing" secondItem="flX-tW-LPv" secondAttribute="trailing" id="bzc-wC-e6s"/>
-                            <constraint firstItem="jp8-Dd-Itr" firstAttribute="top" secondItem="L3n-l0-YbH" secondAttribute="bottom" constant="34" id="hmf-4r-3Fx"/>
-                            <constraint firstItem="L3n-l0-YbH" firstAttribute="leading" secondItem="jp8-Dd-Itr" secondAttribute="leading" id="htx-25-vVL"/>
-                            <constraint firstItem="L3n-l0-YbH" firstAttribute="trailing" secondItem="jp8-Dd-Itr" secondAttribute="trailing" id="iOa-AS-yik"/>
-                            <constraint firstItem="uYH-ae-8lw" firstAttribute="bottom" secondItem="c29-1r-sZT" secondAttribute="bottom" constant="64" id="qS0-U7-JBW"/>
-                            <constraint firstItem="flX-tW-LPv" firstAttribute="leading" secondItem="c29-1r-sZT" secondAttribute="trailing" constant="40" id="szu-6A-niM"/>
+                            <constraint firstItem="L3n-l0-YbH" firstAttribute="trailing" secondItem="cW3-Q2-3rr" secondAttribute="trailingMargin" id="6Jz-OI-cIL"/>
+                            <constraint firstItem="L3n-l0-YbH" firstAttribute="leading" secondItem="cW3-Q2-3rr" secondAttribute="leadingMargin" id="9Da-CG-HfM"/>
+                            <constraint firstItem="L3n-l0-YbH" firstAttribute="leading" secondItem="jp8-Dd-Itr" secondAttribute="leading" id="CiD-wD-oao"/>
+                            <constraint firstItem="L3n-l0-YbH" firstAttribute="top" secondItem="uYH-ae-8lw" secondAttribute="top" constant="59" id="GXv-VF-TfJ"/>
+                            <constraint firstItem="flX-tW-LPv" firstAttribute="trailing" secondItem="jp8-Dd-Itr" secondAttribute="trailing" id="JmW-vs-fsK"/>
+                            <constraint firstItem="c29-1r-sZT" firstAttribute="baseline" secondItem="flX-tW-LPv" secondAttribute="baseline" id="MfM-gX-79q"/>
+                            <constraint firstItem="c29-1r-sZT" firstAttribute="top" secondItem="jp8-Dd-Itr" secondAttribute="bottom" constant="29.5" id="PUY-A1-b9F"/>
+                            <constraint firstItem="flX-tW-LPv" firstAttribute="leading" secondItem="c29-1r-sZT" secondAttribute="trailing" constant="40" id="RxP-dm-N4E"/>
+                            <constraint firstItem="L3n-l0-YbH" firstAttribute="trailing" secondItem="jp8-Dd-Itr" secondAttribute="trailing" id="mMZ-0x-KBN"/>
+                            <constraint firstItem="c29-1r-sZT" firstAttribute="leading" secondItem="jp8-Dd-Itr" secondAttribute="leading" id="o0W-7u-62M"/>
+                            <constraint firstItem="jp8-Dd-Itr" firstAttribute="top" secondItem="L3n-l0-YbH" secondAttribute="bottom" constant="34" id="w12-pN-CQk"/>
                             <constraint firstItem="jp8-Dd-Itr" firstAttribute="centerY" secondItem="cW3-Q2-3rr" secondAttribute="centerY" id="z5V-uV-bWw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uYH-ae-8lw"/>
