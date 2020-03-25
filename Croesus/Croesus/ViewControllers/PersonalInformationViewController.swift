@@ -11,9 +11,6 @@ import UIKit
 import Firebase
 import SWActivityIndicatorView
 
-let profileImageNotificationKey = "co.smithers.profilepicture"
-let profilePicURLNotificationKey = "co.smithers.profpicurl"
-
 class PersonalInformationViewController: UIViewController {
     
     // MARK: Properties
@@ -22,8 +19,8 @@ class PersonalInformationViewController: UIViewController {
     var user : User!
     var photoURL : String?
     //var uid : String?
-    let profilePicKey = Notification.Name(rawValue: profileImageNotificationKey)
-    let profilePicUrlKey = Notification.Name(rawValue: profilePicURLNotificationKey)
+    let profilePicKey = Notification.Name(rawValue: Constants.profileImageNotificationKey)
+    let profilePicUrlKey = Notification.Name(rawValue: Constants.profilePicURLNotificationKey)
     
     // MARK: Outlets
     @IBOutlet weak var firstName: UITextField!
@@ -63,6 +60,7 @@ class PersonalInformationViewController: UIViewController {
            guard let user = user else { return }
            self.user = User(authData: user)
             uid = self.user.uid
+            Constants.keychain["uid"] = self.user.uid
          }
     }
     

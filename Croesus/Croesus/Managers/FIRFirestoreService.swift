@@ -41,7 +41,6 @@ class FIRFirestoreService{
             let json = try encondableObject.toJson(excluding: ["id"])
             reference(to: .users).document(uid).setData(json)
             completion(true)
-            print("Completed Task")
         }catch{
             print(error)
         }

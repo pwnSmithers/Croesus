@@ -27,11 +27,22 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        checkAlreadyLoggedIn()
     }
     
     fileprivate func setupView(){
         loginButtonView.layer.cornerRadius = 8
         
+    }
+    
+    fileprivate func checkAlreadyLoggedIn(){
+        self.showLoadingAdded(to: self.view)
+        guard let _ = Constants.keychain["uid"] else {
+            self.hideLoading()
+            return
+        }
+        self.hideLoading()
+        self.segueToTabController()
     }
     
     fileprivate func login(){
@@ -55,7 +66,8 @@ class LoginViewController: UIViewController {
             
             self.present(alert, animated: true, completion: nil)
           }
-
+            guard let user = user else { return }
+            Constants.keychain["uid"] = user.user.uid
             self.segueToTabController()
         }
     }

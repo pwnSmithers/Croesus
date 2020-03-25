@@ -64,8 +64,8 @@ class RotateImageViewController: UIViewController {
                       if let stringURl = url?.absoluteString{
                         let imageDataDic : [String:UIImage] = ["image":image]
                         let urlDataDic : [String:String] = ["photourl":stringURl]
-                        let profilePicKey = Notification.Name(rawValue: profileImageNotificationKey)
-                        let profilePicUrlKey = Notification.Name(rawValue: profilePicURLNotificationKey)
+                        let profilePicKey = Notification.Name(rawValue: Constants.profileImageNotificationKey)
+                        let profilePicUrlKey = Notification.Name(rawValue: Constants.profilePicURLNotificationKey)
                         NotificationCenter.default.post(name: profilePicKey, object: nil, userInfo: imageDataDic)
                         NotificationCenter.default.post(name: profilePicUrlKey, object: nil, userInfo: urlDataDic)
                         self.dismiss(animated: true, completion: nil)
