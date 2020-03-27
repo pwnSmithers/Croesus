@@ -35,6 +35,7 @@
 		96C265AF242D4EFD002269A6 /* SurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C265AE242D4EFD002269A6 /* SurveyTask.swift */; };
 		96C265B3242D6646002269A6 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C265B2242D6646002269A6 /* RootViewController.swift */; };
 		96C265B7242D75F1002269A6 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C265B6242D75F1002269A6 /* Colors.swift */; };
+		96C265B9242D92E2002269A6 /* Survey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C265B8242D92E2002269A6 /* Survey.swift */; };
 		96FA6FD42427DDF100D009EA /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FA6FD32427DDF100D009EA /* UserData.swift */; };
 		96FA6FD62427E10400D009EA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FA6FD52427E10400D009EA /* User.swift */; };
 		96FA6FD92427F7AD00D009EA /* FIRFirestoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FA6FD82427F7AD00D009EA /* FIRFirestoreService.swift */; };
@@ -101,6 +102,7 @@
 		96C265AE242D4EFD002269A6 /* SurveyTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyTask.swift; sourceTree = "<group>"; };
 		96C265B2242D6646002269A6 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		96C265B6242D75F1002269A6 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		96C265B8242D92E2002269A6 /* Survey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Survey.swift; sourceTree = "<group>"; };
 		96FA6FD32427DDF100D009EA /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		96FA6FD52427E10400D009EA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		96FA6FD82427F7AD00D009EA /* FIRFirestoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIRFirestoreService.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 				96FA6FD32427DDF100D009EA /* UserData.swift */,
 				96FA6FD52427E10400D009EA /* User.swift */,
 				962F0E34242D31EF00CAB74E /* Question.swift */,
+				96C265B8242D92E2002269A6 /* Survey.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -579,6 +582,7 @@
 				963678E0242656F500A9B121 /* SecondViewController.swift in Sources */,
 				96346371242B738900C6F5FD /* SurveryCell.swift in Sources */,
 				963678DE242656F500A9B121 /* FirstViewController.swift in Sources */,
+				96C265B9242D92E2002269A6 /* Survey.swift in Sources */,
 				964C98ED2427D61200D9619E /* PersonalInformationViewController.swift in Sources */,
 				962F0E35242D31EF00CAB74E /* Question.swift in Sources */,
 				96FA6FE024281AA600D009EA /* SnapshotExtension.swift in Sources */,

@@ -11,4 +11,5 @@ import Foundation
 enum FIRCollectionReference: String {
     case users
     case questions
+    case responses
 }

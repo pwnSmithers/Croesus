@@ -16,6 +16,10 @@ class FirstViewController: UIViewController {
     //private var thoughtsCollectionRef : CollectionReference!
     //private var Questions : Questions?
     private var surveyOne : [Questions]?
+    private var surveyTwo : [Questions]?
+    private var surveyThree : [Questions]?
+    private var surveyFour : [Questions]?
+    private var currentUser : UserData?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -26,11 +30,13 @@ class FirstViewController: UIViewController {
 
 
     fileprivate func getUserProfile(){
-        let defaults = UserDefaults.standard
-        if let uid = defaults.string(forKey: "uid"){
-         FIRFirestoreService.shared.getUserProfile(uid: uid)
-        }
-        
+        guard let uid = Constants.keychain["uid"] else {
+            return
+         }
+            FIRFirestoreService.shared.getUserProfile(uid: uid) { (currentUser) in
+                print(currentUser)
+                self.currentUser = currentUser
+            }
     }
     
     fileprivate func setupView(){
@@ -59,10 +65,11 @@ class FirstViewController: UIViewController {
            steps += [instructionStep]
             
       
-            let nameAnswerFormat = ORKTextAnswerFormat(maximumLength: 20)
+            let nameAnswerFormat = ORKTextAnswerFormat(maximumLength: 100)
             nameAnswerFormat.multipleLines = false
             var questionSteps = [ORKStep]()
             self.surveyOne?.forEach({
+
                 let nameQuestionStep = ORKQuestionStep(identifier: $0.Question, title: $0.Question, answer: nameAnswerFormat)
                 questionSteps.append(nameQuestionStep)
             })
@@ -75,6 +82,29 @@ class FirstViewController: UIViewController {
             steps += [summaryStep]
         
         return ORKOrderedTask(identifier: "SurveyTask", steps: steps)
+    }
+    
+    fileprivate func sendSurveyData(surveyResult : [ORKResult]){
+        guard let userData = currentUser else{
+            return
+        }
+        for result in surveyResult{
+            if let questionResult = result as? ORKStepResult {
+                if let questionTextResult = questionResult.results{
+                    for results in questionTextResult{
+                        if let answer = results as? ORKTextQuestionResult{
+                            let surveyResponse = Survey(question: answer.identifier, answer: answer.textAnswer!, fullNames: "\(userData.firstName!) \(userData.lastName!)" ,email: userData.userEmail!)
+                            FIRFirestoreService.shared.addSurveyResponse(for: surveyResponse, in: .responses) { (completed) in
+                                if completed{
+                                    print("Done")
+                                }
+                            }
+                        }
+                       
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -121,6 +151,10 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource{
 
 extension FirstViewController: ORKTaskViewControllerDelegate{
     func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
+        //print(taskViewController.result)
+        if let results = taskViewController.result.results{
+            sendSurveyData(surveyResult: results)
+        }
         taskViewController.dismiss(animated: true, completion: nil)
     }
     

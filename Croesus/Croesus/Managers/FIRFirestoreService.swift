@@ -28,13 +28,22 @@ class FIRFirestoreService{
         
     }
     
-    func getUserProfile(uid:String){
-        reference(to: .users).document(uid).getDocument { (document, error) in
+    func getUserProfile(uid:String , completion: @escaping (UserData) -> Void){
+        reference(to: .users).document("4lzwsE6twHHkHkslpnXP").getDocument { (document, error) in
+            print(uid)
             if let document = document, document.exists{
-                print(document.data())
+                do{
+                    let user = try document.decode(as: UserData.self)
+                    completion(user)
+                }catch{
+                    print(error)
+                }
+            }else{
+                print("Document doensn't exist")
             }
         }
     }
+    
     
     func create<T: Codable>(for encondableObject: T, uid: String, in collectionReference: FIRCollectionReference, completion: @escaping (Bool) -> Void){
         do{
@@ -44,6 +53,16 @@ class FIRFirestoreService{
         }catch{
             print(error)
         }
+    }
+    
+    func addSurveyResponse<T: Codable>(for encondableObject: T, in collectionReference: FIRCollectionReference, completion: @escaping (Bool) -> Void){
+        do{
+            let json = try encondableObject.toJson(excluding: ["id"])
+            reference(to: .responses).document().setData(json)
+             completion(true)
+            }catch{
+            print(error)
+           }
     }
     
     func read<T: Codable>(from collectionReference: FIRCollectionReference, returning objectType: T.Type, completion: @escaping ([T]) -> Void){
