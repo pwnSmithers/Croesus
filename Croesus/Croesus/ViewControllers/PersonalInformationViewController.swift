@@ -72,17 +72,24 @@ class PersonalInformationViewController: UIViewController {
             let photoUrlString = photoURL,
             let UID = uid
         else {
+            self.firstName.checkFields(placeholder: "Please enter your first name")
+            self.lastName.checkFields(placeholder: "Please enter your last name")
             self.hideLoading()
             return
         }
         let userData = UserData(firstName: firstName, lastName: lastname, userEmail: self.user.email, photoUrl: photoUrlString)
-        FIRFirestoreService.shared.create(for: userData, uid: UID, in: .users) { (completed) in
+        FIRFirestoreService.shared.create(for: userData, uid: UID, in: .questions) { (completed) in
             if completed{
                 self.hideLoading()
                 self.segueToTabController()
                 print("Awesome")
             }
         }
+        
+        FIRFirestoreService.shared.read(from: .questions, returning: Questions.self) { (survey) in
+            print(survey)
+        }
+        
     }
     
     fileprivate func createObservers(){

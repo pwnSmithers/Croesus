@@ -7,14 +7,28 @@
 //
 
 import UIKit
-
+import ResearchKit
 class SecondViewController: UIViewController {
 
+    @IBAction func presentButton(_ sender: Any) {
+        logout()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+  
+    fileprivate func logout(){
+    //to logout, delete Firebase uid from Keychain
+        do {
+            try Constants.keychain.remove("uid")
+            //redirect to loginPage
+            self.presentLogin()
+        } catch let error {
+            print("error: \(error)")
+        }
+    }
 }
+
 

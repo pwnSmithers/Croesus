@@ -13,7 +13,7 @@ target 'Croesus' do
   pod 'Firebase/Storage'
   pod 'Firebase/Firestore'
   pod 'KeychainAccess'	
-  pod 'surveymonkey-ios-sdk', '~> 2.0'
+  pod 'ResearchKit'
   target 'CroesusTests' do
     inherit! :search_paths
     # Pods for testing

@@ -292,7 +292,7 @@ PODS:
   - nanopb/decode (0.3.9011)
   - nanopb/encode (0.3.9011)
   - PromisesObjC (1.2.8)
-  - surveymonkey-ios-sdk (2.0.5)
+  - ResearchKit (2.0.0)
   - SWActivityIndicatorView (2.0.0)
 
 DEPENDENCIES:
@@ -302,7 +302,7 @@ DEPENDENCIES:
   - Firebase/Firestore
   - Firebase/Storage
   - KeychainAccess
-  - surveymonkey-ios-sdk (~> 2.0)
+  - ResearchKit
   - SWActivityIndicatorView
 
 SPEC REPOS:
@@ -332,7 +332,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - PromisesObjC
-    - surveymonkey-ios-sdk
+    - ResearchKit
     - SWActivityIndicatorView
 
 SPEC CHECKSUMS:
@@ -361,9 +361,9 @@ SPEC CHECKSUMS:
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
-  surveymonkey-ios-sdk: ba8f45026837e58344f3d2c445045fdfe46287a1
+  ResearchKit: 06020ff370f830138b5efd10bd3606acc4de49d6
   SWActivityIndicatorView: b3d43933021d3e3ba08a814b43751e3f58031e87
 
-PODFILE CHECKSUM: 7774f15b97d3c52f8c6f0eaf59e0e14106ad5eb1
+PODFILE CHECKSUM: c21cc2956004458621fd50828bdd3b5c73331c84
 
 COCOAPODS: 1.8.4

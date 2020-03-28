@@ -20,6 +20,10 @@ class FIRFirestoreService{
         FirebaseApp.configure()
     }
     
+    func persistence(){
+        Database.database().isPersistenceEnabled = true
+    }
+    
     fileprivate func reference(to collectionReference:FIRCollectionReference) -> CollectionReference{
         return Firestore.firestore().collection(collectionReference.rawValue)
     }
@@ -28,13 +32,22 @@ class FIRFirestoreService{
         
     }
     
-    func getUserProfile(uid:String){
+    func getUserProfile(uid:String , completion: @escaping (UserData) -> Void){
         reference(to: .users).document(uid).getDocument { (document, error) in
+            print(uid)
             if let document = document, document.exists{
-                print(document.data())
+                do{
+                    let user = try document.decode(as: UserData.self)
+                    completion(user)
+                }catch{
+                    print(error)
+                }
+            }else{
+                print("Document doensn't exist")
             }
         }
     }
+    
     
     func create<T: Codable>(for encondableObject: T, uid: String, in collectionReference: FIRCollectionReference, completion: @escaping (Bool) -> Void){
         do{
@@ -46,21 +59,18 @@ class FIRFirestoreService{
         }
     }
     
-    
-//    func create<T: Codable>(for encondableObject: T, in collectionReference: FIRCollectionReference, completion: @escaping (Bool) -> Void){
-//        do{
-//            let json = try encondableObject.toJson(excluding: ["id"])
-//            reference(to: .users).addDocument(data: json)
-//            reference(to: .users).document("uid").setData(json)
-//            completion(true)
-//            print("Completed Task")
-//        }catch{
-//            print(error)
-//        }
-//    }
+    func addSurveyResponse<T: Codable>(for encondableObject: T, in collectionReference: FIRCollectionReference, completion: @escaping (Bool) -> Void){
+        do{
+            let json = try encondableObject.toJson(excluding: ["id"])
+            reference(to: .responses).document().setData(json)
+             completion(true)
+            }catch{
+            print(error)
+           }
+    }
     
     func read<T: Codable>(from collectionReference: FIRCollectionReference, returning objectType: T.Type, completion: @escaping ([T]) -> Void){
-        reference(to: .users).addSnapshotListener { (snapshot, _) in
+        reference(to: collectionReference).addSnapshotListener { (snapshot, _) in
             guard let snapshot = snapshot else {return}
             do{
                 var objects = [T]()
