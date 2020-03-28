@@ -72,10 +72,15 @@ class FirstViewController: UIViewController {
             })
          
             steps += questionSteps
-        
+
+            let review = ORKReviewStep(identifier: "reviewSteps")
+            review.text = "These are your answers so far, not too sure about them all of sudden? click on any to edit them . We care about your finances and want to make sure you give us the right data :)"
+            review.title = "Survey Review"
+            steps += [review]
+            
             let summaryStep = ORKCompletionStep(identifier: "SummaryStep")
             summaryStep.title = "Right. Off you go!"
-            summaryStep.text = "Thank you for your honesty"
+            summaryStep.text = "Please tap done to submit this data to our data banks for evaluation. Thank you for your honesty"
             steps += [summaryStep]
         
         return ORKOrderedTask(identifier: "SurveyTask", steps: steps)
