@@ -20,6 +20,10 @@ class FIRFirestoreService{
         FirebaseApp.configure()
     }
     
+    func persistence(){
+        Database.database().isPersistenceEnabled = true
+    }
+    
     fileprivate func reference(to collectionReference:FIRCollectionReference) -> CollectionReference{
         return Firestore.firestore().collection(collectionReference.rawValue)
     }
