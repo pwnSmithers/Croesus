@@ -13,12 +13,8 @@ import ResearchKit
 class FirstViewController: UIViewController {
 
     @IBOutlet weak var surveryTableView: UITableView!
-    //private var thoughtsCollectionRef : CollectionReference!
-    //private var Questions : Questions?
     private var surveyOne : [Questions]?
-    private var surveyTwo : [Questions]?
-    private var surveyThree : [Questions]?
-    private var surveyFour : [Questions]?
+
     private var currentUser : UserData?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,8 +56,8 @@ class FirstViewController: UIViewController {
         
             //Instructions screen
            let instructionStep = ORKInstructionStep(identifier: "IntroStep")
-           instructionStep.title = "The Questions Three"
-           instructionStep.text = "Who would cross the Bridge of Death must answer me these questions three, ere the other side they see."
+           instructionStep.title = "Expenditure Survey"
+           instructionStep.text = "We here at Croesus pride our selves at not only keeping you and your loved ones money safe but also make sure we advise on expenditure."
            steps += [instructionStep]
             
       
@@ -78,7 +74,7 @@ class FirstViewController: UIViewController {
         
             let summaryStep = ORKCompletionStep(identifier: "SummaryStep")
             summaryStep.title = "Right. Off you go!"
-            summaryStep.text = "That was easy!"
+            summaryStep.text = "Thank you for your honesty"
             steps += [summaryStep]
         
         return ORKOrderedTask(identifier: "SurveyTask", steps: steps)
@@ -110,15 +106,7 @@ class FirstViewController: UIViewController {
 
 extension FirstViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var cellCount = 0
-        if let survey = surveyOne{
-            if survey.isEmpty{
-                cellCount = 1
-            }else{
-                cellCount = survey.count
-            }
-        }
-        return cellCount
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -130,7 +118,7 @@ extension FirstViewController: UITableViewDelegate, UITableViewDataSource{
                 cell.surveryName.text = "There are no surveys for you"
                 cell.dateCreated.text = "-"
             }else{
-                cell.surveryName.text = survey[indexPath.row].Question
+                cell.surveryName.text = "Expenditure Survey"
                 cell.dateCreated.text = survey[indexPath.row].date
             }
             
