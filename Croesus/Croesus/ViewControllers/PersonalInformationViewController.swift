@@ -72,6 +72,8 @@ class PersonalInformationViewController: UIViewController {
             let photoUrlString = photoURL,
             let UID = uid
         else {
+            self.firstName.checkFields(placeholder: "Please enter your first name")
+            self.lastName.checkFields(placeholder: "Please enter your last name")
             self.hideLoading()
             return
         }

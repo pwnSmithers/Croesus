@@ -33,7 +33,7 @@ class FIRFirestoreService{
     }
     
     func getUserProfile(uid:String , completion: @escaping (UserData) -> Void){
-        reference(to: .users).document("4lzwsE6twHHkHkslpnXP").getDocument { (document, error) in
+        reference(to: .users).document(uid).getDocument { (document, error) in
             print(uid)
             if let document = document, document.exists{
                 do{

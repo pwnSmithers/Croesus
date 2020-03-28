@@ -29,6 +29,7 @@ class FirstViewController: UIViewController {
         guard let uid = Constants.keychain["uid"] else {
             return
          }
+        
             FIRFirestoreService.shared.getUserProfile(uid: uid) { (currentUser) in
                 print(currentUser)
                 self.currentUser = currentUser

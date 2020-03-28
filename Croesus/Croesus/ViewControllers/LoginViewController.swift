@@ -48,14 +48,16 @@ class LoginViewController: UIViewController {
     fileprivate func login(){
         guard
           let email = userName.text,
-          let password = password.text,
+          let passwordString = password.text,
           email.count > 0,
-          password.count > 0
+          passwordString.count > 0
           else {
+            userName.checkFields(placeholder: "Please enter your email")
+            password.checkFields(placeholder: "Please enter your password")
             return
         }
         self.showLoadingAdded(to: self.view)
-        Auth.auth().signIn(withEmail: email, password: password) { user, error in
+        Auth.auth().signIn(withEmail: email, password: passwordString) { user, error in
             self.hideLoading()
             if let error = error, user == nil {
             let alert = UIAlertController(title: "Sign In Failed",

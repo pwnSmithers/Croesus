@@ -20,9 +20,7 @@ class RootViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(false)
-         if let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "login") as? LoginViewController {
-            self.present(loginVC, animated: true, completion: nil)
-        }
+        self.presentLogin()
     }
 
 }

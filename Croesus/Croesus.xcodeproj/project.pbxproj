@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		78F0ADFCB49BF75FE6BA7649 /* Pods_CroesusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E38B2DC8338EC802E0BEC0C1 /* Pods_CroesusTests.framework */; };
 		92C00804DB70477AFFF71343 /* Pods_Croesus_CroesusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 220A99DEFBCD883445B4EB3D /* Pods_Croesus_CroesusUITests.framework */; };
+		961DE6FA242FC2B800C02505 /* PresentLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961DE6F9242FC2B800C02505 /* PresentLoginVC.swift */; };
+		961DE6FC242FC51100C02505 /* textFieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961DE6FB242FC51100C02505 /* textFieldValidator.swift */; };
 		961E1E3724269B1000A843D4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961E1E3624269B1000A843D4 /* TabBarController.swift */; };
 		962F0E35242D31EF00CAB74E /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962F0E34242D31EF00CAB74E /* Question.swift */; };
 		96346371242B738900C6F5FD /* SurveryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96346370242B738900C6F5FD /* SurveryCell.swift */; };
@@ -68,6 +70,8 @@
 		4DF763EE38387020A122DBAA /* Pods-Croesus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Croesus.release.xcconfig"; path = "Target Support Files/Pods-Croesus/Pods-Croesus.release.xcconfig"; sourceTree = "<group>"; };
 		53B476D99D9F8390EEDE6503 /* Pods-CroesusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CroesusTests.release.xcconfig"; path = "Target Support Files/Pods-CroesusTests/Pods-CroesusTests.release.xcconfig"; sourceTree = "<group>"; };
 		57D5B1380F9DDB1F487A3DBD /* Pods-Croesus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Croesus.debug.xcconfig"; path = "Target Support Files/Pods-Croesus/Pods-Croesus.debug.xcconfig"; sourceTree = "<group>"; };
+		961DE6F9242FC2B800C02505 /* PresentLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentLoginVC.swift; sourceTree = "<group>"; };
+		961DE6FB242FC51100C02505 /* textFieldValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = textFieldValidator.swift; sourceTree = "<group>"; };
 		961E1E3624269B1000A843D4 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		961E1E3824269D2B00A843D4 /* Croesus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Croesus.entitlements; sourceTree = "<group>"; };
 		962F0E34242D31EF00CAB74E /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -259,6 +263,8 @@
 			children = (
 				968F08DC24290E0200447A57 /* ActivityIndicator.swift */,
 				968F08DE24291E0800447A57 /* PresentTabController.swift */,
+				961DE6F9242FC2B800C02505 /* PresentLoginVC.swift */,
+				961DE6FB242FC51100C02505 /* textFieldValidator.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -575,8 +581,10 @@
 			files = (
 				96367914242676C400A9B121 /* LoginViewController.swift in Sources */,
 				96C265AC242D4D5A002269A6 /* SurveyViewController.swift in Sources */,
+				961DE6FA242FC2B800C02505 /* PresentLoginVC.swift in Sources */,
 				96FA6FD92427F7AD00D009EA /* FIRFirestoreService.swift in Sources */,
 				961E1E3724269B1000A843D4 /* TabBarController.swift in Sources */,
+				961DE6FC242FC51100C02505 /* textFieldValidator.swift in Sources */,
 				96FA6FDE2428136E00D009EA /* EncodableExtension.swift in Sources */,
 				963679122426762700A9B121 /* RegistrationViewController.swift in Sources */,
 				963678E0242656F500A9B121 /* SecondViewController.swift in Sources */,

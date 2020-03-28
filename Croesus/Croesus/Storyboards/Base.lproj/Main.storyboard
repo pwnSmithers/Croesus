@@ -106,7 +106,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcX-g9-hml">
                                 <rect key="frame" x="127" y="425" width="138" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Backup &amp; Sync"/>
+                                <state key="normal" title="Logout"/>
                                 <connections>
                                     <action selector="presentButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="uST-Fq-KfI"/>
                                 </connections>
