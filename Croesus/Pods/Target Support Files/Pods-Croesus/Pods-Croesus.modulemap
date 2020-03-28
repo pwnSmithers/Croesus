@@ -1,0 +1,6 @@
+framework module Pods_Croesus {
+  umbrella header "Pods-Croesus-umbrella.h"
+
+  export *
+  module * { export * }
+}
